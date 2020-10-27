@@ -8,7 +8,7 @@ exports.handler = async function(event, context) {
     } else {
         return {
             statusCode: 400,
-            body: JSON.stringify({ message: "Error" }),
+            body: JSON.stringify({ message: "You need to send a JSON with a \"message\" entry" }),
         };
     }
 };
