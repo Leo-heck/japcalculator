@@ -3,12 +3,12 @@ exports.handler = async function(event, context) {
     if (json_body.message){
         return {
             statusCode: 200,
-            body: JSON.stringify({ message: event.body.message }),
+            body: JSON.stringify({ message: json_body.message }),
         };
     } else {
         return {
-            statusCode: 418,
-            body: JSON.stringify({ message: "Hello" }),
+            statusCode: 400,
+            body: JSON.stringify({ message: "Error" }),
         };
     }
 };
